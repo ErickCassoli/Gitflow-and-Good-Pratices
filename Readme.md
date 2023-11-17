@@ -1,8 +1,19 @@
-## Guia GitFlow - Padrões e Boas Práticas
+# Guia GitFlow - Padrões e Boas Práticas
 
 Este documento serve como um guia abrangente para a implementação do GitFlow em projetos de desenvolvimento de software. O GitFlow é uma metodologia de branching que define uma estrutura e regras específicas para organizar o desenvolvimento, facilitando a colaboração entre os membros da equipe. 
 
-## Visão Geral do GitFlow
+## Nav
+- [Branches](#branches)
+   - [Pricipais](#branches-principais)
+   - [Outras](#outras-branches)
+   - [Importancia](#importância-de-cada-branch)
+- [Commits](#commits)
+   - [Titles](#commits-titles)
+   - [Summary](#commits-summary)
+- [Pull Requests](#pull-requests)
+
+
+# Branches
 
 O GitFlow organiza o desenvolvimento em diferentes tipos de branches, cada um com um propósito específico. Isso facilita a gestão do ciclo de vida do software e melhora a colaboração na equipe.
 
@@ -13,9 +24,9 @@ O GitFlow organiza o desenvolvimento em diferentes tipos de branches, cada um co
 2. **`realease`**: Branch para preparar uma nova versão de produção. Essa branch é fixa e usada para correção de bugs e ajustes finais antes de uma versão ser lançada.
 
 
-2. **`develop`**: Branch de desenvolvimento principal. Todas as novas funcionalidades são integradas aqui antes de serem mescladas na `master`. Também é uma branch fixa.
+3. **`develop`**: Branch de desenvolvimento principal. Todas as novas funcionalidades são integradas aqui antes de serem mescladas na `master`. Também é uma branch fixa.
 
-### Branches de Recursos
+### Outras branchs
 
 1. **`feature/nome-da-feature`**: Branch para desenvolvimento de novas funcionalidades. Essas branches são temporárias e são mescladas de volta para a `develop` após a conclusão.
 
@@ -24,7 +35,7 @@ O GitFlow organiza o desenvolvimento em diferentes tipos de branches, cada um co
    feature/login
    ```
 
-### Branches de Lançamento
+#### Branches de Lançamento
 
 1. **`release/version`**: 
    Exemplo:
@@ -32,7 +43,7 @@ O GitFlow organiza o desenvolvimento em diferentes tipos de branches, cada um co
    release/1.0.0
    ```
 
-### Branches de Correção
+#### Branches de Correção
 
 1. **`hotfix/nome-do-hotfix`**: Branch para correção de bugs críticos na produção. Essa branch é fixa e permite a correção de problemas sem interferir no desenvolvimento normal.
 
@@ -41,7 +52,7 @@ O GitFlow organiza o desenvolvimento em diferentes tipos de branches, cada um co
    hotfix/correcao-de-falha
    ```
 
-## Importância de Cada Branch
+### Importância de Cada Branch
 
 ### `master`
 
@@ -66,7 +77,7 @@ As branches `feature` permitem que diferentes membros da equipe trabalhem em fun
 A branch `hotfix` é uma solução rápida para corrigir bugs críticos na produção sem interferir no desenvolvimento normal. Permite a aplicação de correções urgentes sem esperar pelo próximo ciclo de lançamento.
 
 **Certifique-se de criar e nomear branches de acordo com o propósito de sua mudança. Isso ajuda a acompanhar o que está acontecendo em cada branch e facilita a colaboração da equipe.**
-## Commits
+# Commits
 
 ### Mensagens de Commit Semânticas
 
